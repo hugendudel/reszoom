@@ -1,5 +1,5 @@
 const normalDpiZoom = 1;
-const highDpiZoom = 2;
+const highDpiZoom = 1.5;
 
 function zoomSettingsSet() {
   if (chrome.runtime.lastError) {
@@ -16,7 +16,7 @@ function zoomLevelSet() {
 function updateZoomLevelsForTabTo(tabId, newZoom) {
   chrome.tabs.getZoom(tabId, currentZoom => {
     console.log('current zoom factor for tab ' + tabId + ': ' + currentZoom);
-    if (currentZoom != newZoom && 
+    if (currentZoom != newZoom &&
         (currentZoom == highDpiZoom || currentZoom == normalDpiZoom)) {
       console.log('updating to', newZoom);
 
