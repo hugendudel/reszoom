@@ -1,4 +1,4 @@
-const normalDpiZoom = 0.9;
+const normalDpiZoom = 1.0;
 const highDpiZoom = 1.25;
 
 function zoomSettingsSet() {
